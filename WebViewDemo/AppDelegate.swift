@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //self.locationManager.requestWhenInUseAuthorization()
-        self.zaptLocation = ZTLocationSDK(visitableId: "-ltvysf4acgzdxdhf81y")
+        self.zaptLocation = ZTLocationSDK(visitableId: "-nzsg4lxxn8h8vjsfi-c")
         self.zaptLocation.start()
         // Override point for customization after application launch.
         return true

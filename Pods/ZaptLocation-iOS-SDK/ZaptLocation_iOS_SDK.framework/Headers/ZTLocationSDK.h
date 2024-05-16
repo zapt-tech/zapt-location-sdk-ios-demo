@@ -33,11 +33,21 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 
 @property BOOL debugNotificationsEnabled;
 
+@property BOOL disableSyncing;
+
+@property BOOL disableSyncingForPositioning;
+
+@property BOOL disableSyncingForAnalytics;
+
+@property long lastSync;
+
 @property (retain) ZTHttpService *notifier;
 
 - (instancetype)initWithVisitableId :(NSString *)visitableId;
 - (void)start;
 - (void)stop;
+- (void)requestPermissions;
+- (void)requestPermissionsBackground;
 - (NSString*)getMapLink;
 - (NSString*)getInterestLink:(NSString *)interestId;
 
