@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIWebViewDelegate  {
                                 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let zaptLocation = appDelegate.zaptLocation
+        let zaptLocation = appDelegate.zaptSDK
         
         let url = NSURL(string: zaptLocation?.getMapLink() ?? "")
         let request = NSURLRequest(url: url! as URL)

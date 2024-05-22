@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		48045354196BD02000EBD3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48045352196BD02000EBD3A6 /* Main.storyboard */; };
 		48045356196BD02000EBD3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48045355196BD02000EBD3A6 /* Images.xcassets */; };
 		48045362196BD02000EBD3A6 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48045361196BD02000EBD3A6 /* WebViewDemoTests.swift */; };
-		5C6A6BF327C0415100F94825 /* Pods_WebViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A6BF227C0415100F94825 /* Pods_WebViewDemo.framework */; };
+		5CA4E5292BF6AD5800940657 /* ZaptLocationSDKSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		5541262BFB9B170AD3486056 /* Pods-WebViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.release.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5A0FA94A32206192FAE0B1E3 /* Pods-WebViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WebViewDemoTests/Pods-WebViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C6A6BF227C0415100F94825 /* Pods_WebViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_WebViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C880E6327C057DE00B1DE80 /* WebViewDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebViewDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		8B470E36522763C671F3A1CD /* Pods-WebViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BDDE37DBDBE727417869CDCD /* Pods-WebViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDemoTests/Pods-WebViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F067FF9B9C83A6EF59C033 /* Pods_WebViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6A6BF327C0415100F94825 /* Pods_WebViewDemo.framework in Frameworks */,
+				5CA4E5292BF6AD5800940657 /* ZaptLocationSDKSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +78,6 @@
 		48045340196BD02000EBD3A6 = {
 			isa = PBXGroup;
 			children = (
-				5C880E6327C057DE00B1DE80 /* WebViewDemo-Bridging-Header.h */,
 				4804534B196BD02000EBD3A6 /* WebViewDemo */,
 				4804535E196BD02000EBD3A6 /* WebViewDemoTests */,
 				4804534A196BD02000EBD3A6 /* Products */,
@@ -161,6 +159,9 @@
 			dependencies = (
 			);
 			name = WebViewDemo;
+			packageProductDependencies = (
+				5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */,
+			);
 			productName = WebViewDemo;
 			productReference = 48045349196BD02000EBD3A6 /* WebViewDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -213,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 48045340196BD02000EBD3A6;
+			packageReferences = (
+				5CA4E5272BF6AD2900940657 /* XCRemoteSwiftPackageReference "zapt-location-sdk-swift" */,
+			);
 			productRefGroup = 4804534A196BD02000EBD3A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -468,11 +472,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WebViewDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -492,11 +498,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WebViewDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -515,7 +523,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = WebViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -532,7 +544,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = WebViewDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -570,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CA4E5272BF6AD2900940657 /* XCRemoteSwiftPackageReference "zapt-location-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@bitbucket.org:zapt/zapt-location-sdk-swift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CA4E5272BF6AD2900940657 /* XCRemoteSwiftPackageReference "zapt-location-sdk-swift" */;
+			productName = ZaptLocationSDKSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48045341196BD02000EBD3A6 /* Project object */;
 }
