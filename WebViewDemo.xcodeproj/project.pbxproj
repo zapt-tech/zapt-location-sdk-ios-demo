@@ -13,7 +13,7 @@
 		48045354196BD02000EBD3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48045352196BD02000EBD3A6 /* Main.storyboard */; };
 		48045356196BD02000EBD3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48045355196BD02000EBD3A6 /* Images.xcassets */; };
 		48045362196BD02000EBD3A6 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48045361196BD02000EBD3A6 /* WebViewDemoTests.swift */; };
-		5CA4E5292BF6AD5800940657 /* ZaptLocationSDKSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */; };
+		5CA4E5502BFE0A1600940657 /* ZaptLocationSDKSwiftFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA4E5292BF6AD5800940657 /* ZaptLocationSDKSwift in Frameworks */,
+				5CA4E5502BFE0A1600940657 /* ZaptLocationSDKSwiftFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +160,7 @@
 			);
 			name = WebViewDemo;
 			packageProductDependencies = (
-				5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */,
+				5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */,
 			);
 			productName = WebViewDemo;
 			productReference = 48045349196BD02000EBD3A6 /* WebViewDemo.app */;
@@ -216,6 +216,7 @@
 			mainGroup = 48045340196BD02000EBD3A6;
 			packageReferences = (
 				5CA4E5272BF6AD2900940657 /* XCRemoteSwiftPackageReference "zapt-location-sdk-swift" */,
+				5CA4E54E2BFE0A1600940657 /* XCRemoteSwiftPackageReference "zapt-location-ios-swift-sdk" */,
 			);
 			productRefGroup = 4804534A196BD02000EBD3A6 /* Products */;
 			projectDirPath = "";
@@ -596,13 +597,21 @@
 				kind = branch;
 			};
 		};
+		5CA4E54E2BFE0A1600940657 /* XCRemoteSwiftPackageReference "zapt-location-ios-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zapt-tech/zapt-location-ios-swift-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5CA4E5282BF6AD5800940657 /* ZaptLocationSDKSwift */ = {
+		5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5CA4E5272BF6AD2900940657 /* XCRemoteSwiftPackageReference "zapt-location-sdk-swift" */;
-			productName = ZaptLocationSDKSwift;
+			package = 5CA4E54E2BFE0A1600940657 /* XCRemoteSwiftPackageReference "zapt-location-ios-swift-sdk" */;
+			productName = ZaptLocationSDKSwiftFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

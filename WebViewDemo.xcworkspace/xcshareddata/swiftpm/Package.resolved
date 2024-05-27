@@ -1,6 +1,15 @@
 {
-  "originHash" : "ca0a928f144fedca60e37eabc0effccdca9742a91e802617e3e9862f39401fbe",
+  "originHash" : "11a464c30f6fdc5eca4e0ec160c5c86063ea7d02e95ec5cf3ec227b1dbf77fdb",
   "pins" : [
+    {
+      "identity" : "zapt-location-ios-swift-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zapt-tech/zapt-location-ios-swift-sdk",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3df238784529c9819adbc2dcf80c619cf3bfc239"
+      }
+    },
     {
       "identity" : "zapt-location-sdk-swift",
       "kind" : "remoteSourceControl",

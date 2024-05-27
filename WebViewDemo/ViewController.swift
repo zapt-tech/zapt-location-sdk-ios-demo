@@ -1,9 +1,5 @@
 //
-//  ViewController.swift
-//  WebViewDemo
-//
-//  Created by Ravi Shankar on 08/07/14.
-//  Copyright (c) 2014 Ravi Shankar. All rights reserved.
+//  Copyright (c) 2024 Zapt Tech. All rights reserved.
 //
 
 import UIKit
