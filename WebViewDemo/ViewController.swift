@@ -7,7 +7,7 @@ import UIKit
 class ViewController: UIViewController, UIWebViewDelegate  {
     
     @IBOutlet var webView: UIWebView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                                 
     override func viewDidLoad() {
@@ -18,9 +18,6 @@ class ViewController: UIViewController, UIWebViewDelegate  {
         let request = NSURLRequest(url: url! as URL)
         
         webView.delegate = self
-        
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.startAnimating()
         webView.loadRequest(request as URLRequest)
     }
 
@@ -28,26 +25,5 @@ class ViewController: UIViewController, UIWebViewDelegate  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        activityIndicator.stopAnimating()
-    }
-    
-    @IBAction func doRefresh(_: AnyObject) {
-        webView.reload()
-    }
-    
-    @IBAction func goBack(_: AnyObject) {
-        webView.goBack()
-    }
-    
-    @IBAction func goForward(_: AnyObject) {
-        webView.goForward()
-    }
-    
-    @IBAction func stop(_: AnyObject) {
-        webView.stopLoading()
-    }
-
 }
 

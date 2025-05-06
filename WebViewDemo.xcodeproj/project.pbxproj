@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,16 @@
 		48045354196BD02000EBD3A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48045352196BD02000EBD3A6 /* Main.storyboard */; };
 		48045356196BD02000EBD3A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48045355196BD02000EBD3A6 /* Images.xcassets */; };
 		48045362196BD02000EBD3A6 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48045361196BD02000EBD3A6 /* WebViewDemoTests.swift */; };
-		5CA4E5502BFE0A1600940657 /* ZaptLocationSDKSwiftFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */; };
+		5C33F7F12DC997A300C12282 /* ZTHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F02DC997A300C12282 /* ZTHttpService.swift */; };
+		5C33F7F22DC997A300C12282 /* ZTHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F02DC997A300C12282 /* ZTHttpService.swift */; };
+		5C33F7F42DC997D700C12282 /* ZTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F32DC997D700C12282 /* ZTLogger.swift */; };
+		5C33F7F52DC997D700C12282 /* ZTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F32DC997D700C12282 /* ZTLogger.swift */; };
+		5C33F7F72DC997FC00C12282 /* ZTUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F62DC997FC00C12282 /* ZTUserInfo.swift */; };
+		5C33F7F82DC997FC00C12282 /* ZTUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F7F62DC997FC00C12282 /* ZTUserInfo.swift */; };
+		5C33F8062DC998FB00C12282 /* ZTLocationSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F8052DC998FB00C12282 /* ZTLocationSDK.swift */; };
+		5C33F8072DC998FB00C12282 /* ZTLocationSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33F8052DC998FB00C12282 /* ZTLocationSDK.swift */; };
+		5CC953DB2DC8FD370078F25A /* WebViewDemoClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 5CC953B12DC8FD350078F25A /* WebViewDemoClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CC953EF2DC9836A0078F25A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CC953EE2DC9836A0078F25A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +33,42 @@
 			remoteGlobalIDString = 48045348196BD02000EBD3A6;
 			remoteInfo = WebViewDemo;
 		};
+		5CC953C82DC8FD370078F25A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48045341196BD02000EBD3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CC953B02DC8FD350078F25A;
+			remoteInfo = WebViewDemoClip;
+		};
+		5CC953D22DC8FD370078F25A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48045341196BD02000EBD3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CC953B02DC8FD350078F25A;
+			remoteInfo = WebViewDemoClip;
+		};
+		5CC953D92DC8FD370078F25A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48045341196BD02000EBD3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CC953B02DC8FD350078F25A;
+			remoteInfo = WebViewDemoClip;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5CC953DC2DC8FD370078F25A /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				5CC953DB2DC8FD370078F25A /* WebViewDemoClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		48045349196BD02000EBD3A6 /* WebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,18 +82,41 @@
 		48045361196BD02000EBD3A6 /* WebViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoTests.swift; sourceTree = "<group>"; };
 		5541262BFB9B170AD3486056 /* Pods-WebViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.release.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5A0FA94A32206192FAE0B1E3 /* Pods-WebViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WebViewDemoTests/Pods-WebViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C33F7F02DC997A300C12282 /* ZTHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTHttpService.swift; sourceTree = "<group>"; };
+		5C33F7F32DC997D700C12282 /* ZTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTLogger.swift; sourceTree = "<group>"; };
+		5C33F7F62DC997FC00C12282 /* ZTUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTUserInfo.swift; sourceTree = "<group>"; };
+		5C33F8052DC998FB00C12282 /* ZTLocationSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTLocationSDK.swift; sourceTree = "<group>"; };
 		5C6A6BF227C0415100F94825 /* Pods_WebViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_WebViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC953B12DC8FD350078F25A /* WebViewDemoClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemoClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC953C72DC8FD370078F25A /* WebViewDemoClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewDemoClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC953D12DC8FD370078F25A /* WebViewDemoClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewDemoClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC953EE2DC9836A0078F25A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8B470E36522763C671F3A1CD /* Pods-WebViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDemo/Pods-WebViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BDDE37DBDBE727417869CDCD /* Pods-WebViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebViewDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WebViewDemoTests/Pods-WebViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4F067FF9B9C83A6EF59C033 /* Pods_WebViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5CC953E32DC8FD370078F25A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5CC953B02DC8FD350078F25A /* WebViewDemoClip */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5CC953B22DC8FD350078F25A /* WebViewDemoClip */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5CC953E32DC8FD370078F25A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = WebViewDemoClip; sourceTree = "<group>"; };
+		5CC953CA2DC8FD370078F25A /* WebViewDemoClipTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WebViewDemoClipTests; sourceTree = "<group>"; };
+		5CC953D42DC8FD370078F25A /* WebViewDemoClipUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = WebViewDemoClipUITests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		48045346196BD02000EBD3A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA4E5502BFE0A1600940657 /* ZaptLocationSDKSwiftFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +125,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				43608DCA7B35A2B63FE6DAB9 /* Pods_WebViewDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953AE2DC8FD350078F25A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953C42DC8FD370078F25A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953CE2DC8FD370078F25A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +168,9 @@
 			children = (
 				4804534B196BD02000EBD3A6 /* WebViewDemo */,
 				4804535E196BD02000EBD3A6 /* WebViewDemoTests */,
+				5CC953B22DC8FD350078F25A /* WebViewDemoClip */,
+				5CC953CA2DC8FD370078F25A /* WebViewDemoClipTests */,
+				5CC953D42DC8FD370078F25A /* WebViewDemoClipUITests */,
 				4804534A196BD02000EBD3A6 /* Products */,
 				083A87B7A2BE01A6107DC2D1 /* Pods */,
 				86437DF9F1D29336350E91B2 /* Frameworks */,
@@ -91,6 +182,9 @@
 			children = (
 				48045349196BD02000EBD3A6 /* WebViewDemo.app */,
 				4804535B196BD02000EBD3A6 /* WebViewDemoTests.xctest */,
+				5CC953B12DC8FD350078F25A /* WebViewDemoClip.app */,
+				5CC953C72DC8FD370078F25A /* WebViewDemoClipTests.xctest */,
+				5CC953D12DC8FD370078F25A /* WebViewDemoClipUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +197,11 @@
 				48045352196BD02000EBD3A6 /* Main.storyboard */,
 				48045355196BD02000EBD3A6 /* Images.xcassets */,
 				4804534C196BD02000EBD3A6 /* Supporting Files */,
+				5CC953EE2DC9836A0078F25A /* Launch Screen.storyboard */,
+				5C33F7F02DC997A300C12282 /* ZTHttpService.swift */,
+				5C33F7F32DC997D700C12282 /* ZTLogger.swift */,
+				5C33F7F62DC997FC00C12282 /* ZTUserInfo.swift */,
+				5C33F8052DC998FB00C12282 /* ZTLocationSDK.swift */,
 			);
 			path = WebViewDemo;
 			sourceTree = "<group>";
@@ -153,14 +252,15 @@
 				48045346196BD02000EBD3A6 /* Frameworks */,
 				48045347196BD02000EBD3A6 /* Resources */,
 				DB6713317A934F037086E2F9 /* [CP] Embed Pods Frameworks */,
+				5CC953DC2DC8FD370078F25A /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5CC953DA2DC8FD370078F25A /* PBXTargetDependency */,
 			);
 			name = WebViewDemo;
 			packageProductDependencies = (
-				5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */,
 			);
 			productName = WebViewDemo;
 			productReference = 48045349196BD02000EBD3A6 /* WebViewDemo.app */;
@@ -185,23 +285,102 @@
 			productReference = 4804535B196BD02000EBD3A6 /* WebViewDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5CC953B02DC8FD350078F25A /* WebViewDemoClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC953E42DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClip" */;
+			buildPhases = (
+				5CC953AD2DC8FD350078F25A /* Sources */,
+				5CC953AE2DC8FD350078F25A /* Frameworks */,
+				5CC953AF2DC8FD350078F25A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5CC953B22DC8FD350078F25A /* WebViewDemoClip */,
+			);
+			name = WebViewDemoClip;
+			packageProductDependencies = (
+			);
+			productName = WebViewDemoClip;
+			productReference = 5CC953B12DC8FD350078F25A /* WebViewDemoClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		5CC953C62DC8FD370078F25A /* WebViewDemoClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC953E52DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClipTests" */;
+			buildPhases = (
+				5CC953C32DC8FD370078F25A /* Sources */,
+				5CC953C42DC8FD370078F25A /* Frameworks */,
+				5CC953C52DC8FD370078F25A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC953C92DC8FD370078F25A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5CC953CA2DC8FD370078F25A /* WebViewDemoClipTests */,
+			);
+			name = WebViewDemoClipTests;
+			packageProductDependencies = (
+			);
+			productName = WebViewDemoClipTests;
+			productReference = 5CC953C72DC8FD370078F25A /* WebViewDemoClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5CC953D02DC8FD370078F25A /* WebViewDemoClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC953E62DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClipUITests" */;
+			buildPhases = (
+				5CC953CD2DC8FD370078F25A /* Sources */,
+				5CC953CE2DC8FD370078F25A /* Frameworks */,
+				5CC953CF2DC8FD370078F25A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CC953D32DC8FD370078F25A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5CC953D42DC8FD370078F25A /* WebViewDemoClipUITests */,
+			);
+			name = WebViewDemoClipUITests;
+			packageProductDependencies = (
+			);
+			productName = WebViewDemoClipUITests;
+			productReference = 5CC953D12DC8FD370078F25A /* WebViewDemoClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		48045341196BD02000EBD3A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Ravi Shankar";
 				TargetAttributes = {
 					48045348196BD02000EBD3A6 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = 2SEUQ4J8Q3;
 						LastSwiftMigration = 1320;
 					};
 					4804535A196BD02000EBD3A6 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 48045348196BD02000EBD3A6;
+					};
+					5CC953B02DC8FD350078F25A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					5CC953C62DC8FD370078F25A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5CC953B02DC8FD350078F25A;
+					};
+					5CC953D02DC8FD370078F25A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5CC953B02DC8FD350078F25A;
 					};
 				};
 			};
@@ -224,6 +403,9 @@
 			targets = (
 				48045348196BD02000EBD3A6 /* WebViewDemo */,
 				4804535A196BD02000EBD3A6 /* WebViewDemoTests */,
+				5CC953B02DC8FD350078F25A /* WebViewDemoClip */,
+				5CC953C62DC8FD370078F25A /* WebViewDemoClipTests */,
+				5CC953D02DC8FD370078F25A /* WebViewDemoClipUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,12 +415,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC953EF2DC9836A0078F25A /* Launch Screen.storyboard in Resources */,
 				48045354196BD02000EBD3A6 /* Main.storyboard in Resources */,
 				48045356196BD02000EBD3A6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		48045359196BD02000EBD3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953AF2DC8FD350078F25A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953C52DC8FD370078F25A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953CF2DC8FD370078F25A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,6 +522,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48045351196BD02000EBD3A6 /* ViewController.swift in Sources */,
+				5C33F8062DC998FB00C12282 /* ZTLocationSDK.swift in Sources */,
+				5C33F7F12DC997A300C12282 /* ZTHttpService.swift in Sources */,
+				5C33F7F42DC997D700C12282 /* ZTLogger.swift in Sources */,
+				5C33F7F72DC997FC00C12282 /* ZTUserInfo.swift in Sources */,
 				4804534F196BD02000EBD3A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +538,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CC953AD2DC8FD350078F25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C33F7F22DC997A300C12282 /* ZTHttpService.swift in Sources */,
+				5C33F8072DC998FB00C12282 /* ZTLocationSDK.swift in Sources */,
+				5C33F7F52DC997D700C12282 /* ZTLogger.swift in Sources */,
+				5C33F7F82DC997FC00C12282 /* ZTUserInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953C32DC8FD370078F25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CC953CD2DC8FD370078F25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -337,6 +570,21 @@
 			isa = PBXTargetDependency;
 			target = 48045348196BD02000EBD3A6 /* WebViewDemo */;
 			targetProxy = 4804535C196BD02000EBD3A6 /* PBXContainerItemProxy */;
+		};
+		5CC953C92DC8FD370078F25A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CC953B02DC8FD350078F25A /* WebViewDemoClip */;
+			targetProxy = 5CC953C82DC8FD370078F25A /* PBXContainerItemProxy */;
+		};
+		5CC953D32DC8FD370078F25A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CC953B02DC8FD350078F25A /* WebViewDemoClip */;
+			targetProxy = 5CC953D22DC8FD370078F25A /* PBXContainerItemProxy */;
+		};
+		5CC953DA2DC8FD370078F25A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CC953B02DC8FD350078F25A /* WebViewDemoClip */;
+			targetProxy = 5CC953D92DC8FD370078F25A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,21 +715,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viracopos Maps";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -493,20 +745,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viracopos Maps";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -515,6 +771,7 @@
 			baseConfigurationReference = BDDE37DBDBE727417869CDCD /* Pods-WebViewDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewDemo.app/WebViewDemo";
+				DEVELOPMENT_TEAM = QZT6XBBV3U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,7 +786,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -540,6 +797,7 @@
 			baseConfigurationReference = 5A0FA94A32206192FAE0B1E3 /* Pods-WebViewDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebViewDemo.app/WebViewDemo";
+				DEVELOPMENT_TEAM = QZT6XBBV3U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -550,9 +808,242 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rs..${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		5CC953DD2DC8FD370078F25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WebViewDemoClip/WebViewDemoClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WebViewDemoClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viracopos Maps";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CC953DE2DC8FD370078F25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = WebViewDemoClip/WebViewDemoClip.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WebViewDemoClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Viracopos Maps";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Utilizamos a localização para mostrar sua posição no mapa em tempo real";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CC953DF2DC8FD370078F25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebViewDemoClip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebViewDemoClip";
+			};
+			name = Debug;
+		};
+		5CC953E02DC8FD370078F25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WebViewDemoClip.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WebViewDemoClip";
+			};
+			name = Release;
+		};
+		5CC953E12DC8FD370078F25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps.tests.ui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebViewDemoClip;
+			};
+			name = Debug;
+		};
+		5CC953E22DC8FD370078F25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2SEUQ4J8Q3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.zapt.viracopos.ViracoposMaps.tests.ui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WebViewDemoClip;
 			};
 			name = Release;
 		};
@@ -586,6 +1077,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5CC953E42DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC953DD2DC8FD370078F25A /* Debug */,
+				5CC953DE2DC8FD370078F25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC953E52DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC953DF2DC8FD370078F25A /* Debug */,
+				5CC953E02DC8FD370078F25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC953E62DC8FD370078F25A /* Build configuration list for PBXNativeTarget "WebViewDemoClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC953E12DC8FD370078F25A /* Debug */,
+				5CC953E22DC8FD370078F25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -606,14 +1124,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5CA4E54F2BFE0A1600940657 /* ZaptLocationSDKSwiftFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5CA4E54E2BFE0A1600940657 /* XCRemoteSwiftPackageReference "zapt-location-ios-swift-sdk" */;
-			productName = ZaptLocationSDKSwiftFramework;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48045341196BD02000EBD3A6 /* Project object */;
 }
