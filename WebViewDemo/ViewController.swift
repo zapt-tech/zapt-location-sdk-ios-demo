@@ -1,29 +1,53 @@
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController, WKNavigationDelegate {
 
-	@IBOutlet var webView: UIWebView!
+	var webView: WKWebView!
 	let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
 	var initialURL: URL?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		guard
+			let blackTopInset = view.subviews.first(where: { $0.accessibilityIdentifier == "TopBlackView" || $0.restorationIdentifier == "TopBlackView" }),
+			let blackBottomInset = view.subviews.first(where: { $0.accessibilityIdentifier == "BottomBlackView" || $0.restorationIdentifier == "BottomBlackView" })
+		else {
+			print("⚠️ Não encontrou as bordas pretas no storyboard.")
+			return
+		}
+
+		// Inicializa WKWebView programaticamente
+		let config = WKWebViewConfiguration()
+		webView = WKWebView(frame: self.view.bounds, configuration: config)
+		webView.navigationDelegate = self
+		webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+		view.insertSubview(webView, belowSubview: blackTopInset)
+		webView.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			webView.topAnchor.constraint(equalTo: blackTopInset.bottomAnchor),
+			webView.bottomAnchor.constraint(equalTo: blackBottomInset.topAnchor),
+			webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+			webView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+		])
+
+		// Montagem da URL final
 		let zaptLocation = appDelegate.zaptSDK
 		let baseURL = URL(string: zaptLocation?.getMapLink() ?? "")
 		var finalURL: URL?
 
 		if let baseURL = baseURL {
 			if let sourceURL = initialURL {
-				finalURL = URL(string: appendQueryParameters(from: sourceURL.absoluteString, to: baseURL.absoluteString))
+				finalURL = URL(string: appendQueryParameters(from: sourceURL.absoluteString, to: baseURL.absoluteString + "p=3"))
 			} else {
 				finalURL = baseURL
 			}
 
-			webView.delegate = self
-			let request = URLRequest(url: finalURL!)
-			webView.loadRequest(request)
+			if let finalURL = finalURL {
+				let request = URLRequest(url: finalURL)
+				webView.load(request)
+			}
 		}
 	}
 
@@ -38,20 +62,25 @@ class ViewController: UIViewController, UIWebViewDelegate {
 		return destinationURL + separator + query
 	}
 
-	// MARK: - UIWebViewDelegate
-	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-		guard let url = request.url else { return false }
+	// MARK: - WKNavigationDelegate
+	func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,
+				 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
-		// Detecta se é uma tentativa de "window.open" de um link externo
-		if navigationType == .linkClicked || navigationType == .other {
+		guard let url = navigationAction.request.url else {
+			decisionHandler(.cancel)
+			return
+		}
+
+		// Detecta se o link é externo e abre no Safari
+		if navigationAction.navigationType == .linkActivated {
 			if !isInternalURL(url) {
-				// Abre no navegador externo (Safari)
 				UIApplication.shared.open(url, options: [:], completionHandler: nil)
-				return false
+				decisionHandler(.cancel)
+				return
 			}
 		}
 
-		return true
+		decisionHandler(.allow)
 	}
 
 	func isInternalURL(_ url: URL) -> Bool {
