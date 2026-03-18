@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-1B-TMz">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-1B-TMz">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="stop" id="bFL-xo-NTS">
                                         <connections>
@@ -47,23 +46,27 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igD-RW-O2X">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jf6-pH-WJS">
-                                <rect key="frame" x="290" y="268" width="20" height="20"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1v-vY-QsI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jf6-pH-WJS">
+                                <rect key="frame" x="197" y="416" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jf6-pH-WJS" firstAttribute="centerX" secondItem="LIY-1B-TMz" secondAttribute="centerX" id="1WM-QB-pBl"/>
+                            <constraint firstItem="Jf6-pH-WJS" firstAttribute="centerX" secondItem="f1v-vY-QsI" secondAttribute="centerX" id="1WM-QB-pBl"/>
                             <constraint firstAttribute="bottom" secondItem="LIY-1B-TMz" secondAttribute="bottom" id="2c7-JX-a08"/>
-                            <constraint firstItem="igD-RW-O2X" firstAttribute="bottom" secondItem="LIY-1B-TMz" secondAttribute="top" id="FBs-CH-Jjo"/>
-                            <constraint firstItem="igD-RW-O2X" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Gch-eG-1hG"/>
-                            <constraint firstItem="igD-RW-O2X" firstAttribute="trailing" secondItem="LIY-1B-TMz" secondAttribute="trailing" id="Jin-m4-HH2"/>
-                            <constraint firstItem="igD-RW-O2X" firstAttribute="leading" secondItem="LIY-1B-TMz" secondAttribute="leading" id="QUd-SS-Bfa"/>
-                            <constraint firstItem="Jf6-pH-WJS" firstAttribute="centerY" secondItem="igD-RW-O2X" secondAttribute="centerY" id="RUo-pQ-Sk0"/>
+                            <constraint firstItem="Jf6-pH-WJS" firstAttribute="centerY" secondItem="f1v-vY-QsI" secondAttribute="centerY" id="53u-LN-X4p"/>
+                            <constraint firstItem="f1v-vY-QsI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ixd-r9-Hwy"/>
+                            <constraint firstItem="f1v-vY-QsI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="S7t-lQ-HL5"/>
+                            <constraint firstAttribute="trailing" secondItem="f1v-vY-QsI" secondAttribute="trailing" id="XS3-gd-dfR"/>
+                            <constraint firstItem="LIY-1B-TMz" firstAttribute="top" secondItem="f1v-vY-QsI" secondAttribute="bottom" id="dEq-a4-jCp"/>
                             <constraint firstAttribute="trailing" secondItem="LIY-1B-TMz" secondAttribute="trailing" id="ikb-Lr-XaN"/>
                             <constraint firstItem="LIY-1B-TMz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="rlg-sT-Fou"/>
                         </constraints>
@@ -72,12 +75,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Jf6-pH-WJS" id="BI2-vc-iTJ"/>
-                        <outlet property="webView" destination="igD-RW-O2X" id="ozk-Oi-fJ8"/>
+                        <outlet property="webView" destination="f1v-vY-QsI" id="6eP-BN-g3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="-44"/>
+            <point key="canvasLocation" x="-26.086956521739133" y="-44.196428571428569"/>
         </scene>
     </scenes>
 </document>
