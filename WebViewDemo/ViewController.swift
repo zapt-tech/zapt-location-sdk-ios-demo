@@ -10,11 +10,13 @@ import UIKit
 import WebKit
 
 final class ViewController: UIViewController, WKNavigationDelegate {
-    
+
     @IBOutlet var webView: WKWebView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                
+    private var permissionsBridge: ZTPermissionsWebViewBridge?
+    private var settingsBridge: ZTSystemSettingsWebViewBridge?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let zaptLocation = appDelegate.zaptLocation
@@ -23,9 +25,12 @@ final class ViewController: UIViewController, WKNavigationDelegate {
         if #available(iOS 16.4, *) {
             webView.isInspectable = true
         }
-        
+
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
+
+        permissionsBridge = zaptLocation?.createAndAttachPermissionsWebViewBridge(webView)
+        settingsBridge = zaptLocation?.createAndAttachSystemSettingsWebViewBridge(webView)
 
         let url = URL(string: zaptLocation?.getMapLink() ?? "")
         let request = URLRequest(url: url!)
@@ -36,7 +41,7 @@ final class ViewController: UIViewController, WKNavigationDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }
@@ -57,5 +62,12 @@ final class ViewController: UIViewController, WKNavigationDelegate {
         webView.stopLoading()
     }
 
+    deinit {
+        if let permissionsBridge {
+            appDelegate.zaptLocation?.detach(permissionsBridge)
+        }
+        if let settingsBridge {
+            appDelegate.zaptLocation?.detach(settingsBridge)
+        }
+    }
 }
-
