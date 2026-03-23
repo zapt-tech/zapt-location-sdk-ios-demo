@@ -7,33 +7,39 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate  {
-    
-    @IBOutlet var webView: UIWebView!
+final class ViewController: UIViewController, WKNavigationDelegate {
+
+    @IBOutlet var webView: WKWebView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let zaptLocation = appDelegate.zaptLocation
         
-        let url = NSURL(string: zaptLocation?.getMapLink() ?? "")
-        let request = NSURLRequest(url: url! as URL)
-        
-        webView.delegate = self
-        
+        webView.navigationDelegate = self
+        if #available(iOS 16.4, *) {
+            webView.isInspectable = true
+        }
+
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        webView.loadRequest(request as URLRequest)
+
+        zaptLocation?.attachWebViewBridges(webView)
+
+        let url = URL(string: zaptLocation?.getMapLink() ?? "")
+        let request = URLRequest(url: url!)
+        webView.load(request)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }
     
@@ -53,5 +59,7 @@ class ViewController: UIViewController, UIWebViewDelegate  {
         webView.stopLoading()
     }
 
+    deinit {
+        appDelegate.zaptLocation?.detachWebViewBridges()
+    }
 }
-
