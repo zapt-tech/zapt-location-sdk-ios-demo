@@ -6,7 +6,7 @@ target 'WebViewDemo' do
   use_frameworks!
 
   # Pods for WebViewDemo
-  pod 'ZaptLocation-iOS-SDK', '~> 0.0.7'
+  pod 'ZaptLocation-iOS-SDK', '~> 0.0.13'
 
   target 'WebViewDemoTests' do
     inherit! :search_paths
