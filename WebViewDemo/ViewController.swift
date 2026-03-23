@@ -14,8 +14,6 @@ final class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet var webView: WKWebView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private var permissionsBridge: ZTPermissionsWebViewBridge?
-    private var settingsBridge: ZTSystemSettingsWebViewBridge?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +27,7 @@ final class ViewController: UIViewController, WKNavigationDelegate {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
 
-        permissionsBridge = zaptLocation?.createAndAttachPermissionsWebViewBridge(webView)
-        settingsBridge = zaptLocation?.createAndAttachSystemSettingsWebViewBridge(webView)
+        zaptLocation?.attachWebViewBridges(webView)
 
         let url = URL(string: zaptLocation?.getMapLink() ?? "")
         let request = URLRequest(url: url!)
@@ -63,11 +60,6 @@ final class ViewController: UIViewController, WKNavigationDelegate {
     }
 
     deinit {
-        if let permissionsBridge {
-            appDelegate.zaptLocation?.detach(permissionsBridge)
-        }
-        if let settingsBridge {
-            appDelegate.zaptLocation?.detach(settingsBridge)
-        }
+        appDelegate.zaptLocation?.detachWebViewBridges()
     }
 }
